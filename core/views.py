@@ -1,3 +1,5 @@
 from django.shortcuts import render
-def frontview(request):
-    return render(request, 'core/template/front.html')
+from django.http import HttpResponse
+
+def front_view(request):
+    return render(request, 'index.html')

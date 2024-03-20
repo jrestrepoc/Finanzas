@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Budget Buddy</title>
+  <link rel="stylesheet" href="{% static 'Styles/stylesRegistro.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <h1>Budget Buddy</h1>
+        <ul>
+          <li><a href="http://127.0.0.1:8000/">Inicio</a></li>
+          <li><a href="#">Acerca</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="http://127.0.0.1:8000/login/">Iniciar Sesión</a></li>
+          <li><a href="#">Registrarse</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="registro">
+    <div class="container">
+      <h2>Registro</h2>
+      <form autocomplete="off" class="sign-up-form" method="post">
+        {% csrf_token %}
+
+        <div class="heading">
+            <h2>Get Started</h2>
+            <h6>Already have an account?</h6>
+            <a href="/login" class="toggle">Sign in</a>
+        </div>
+
+        <div class="actual-form">
+            <div class="input-wrap">
+                <input
+                    type="text"
+                    class="input-field"
+                    id="username"
+                    name="username"
+                    minlength="4"
+                    autocomplete="off"
+                    required
+                />
+                <label for="username">Name</label>
+            </div>
+
+            <div class="input-wrap">
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                />
+                <label for="email">Email</label>
+            </div>
+
+            <div class="input-wrap">
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                />
+                <label for="password">Password</label>
+            </div>
+
+            <input type="submit" value="Sign Up" class="sign-btn" />
+
+            <p class="text">
+                By signing up, I agree to the
+                <a href="#">Terms of Services</a> and
+                <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Budget Buddy - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

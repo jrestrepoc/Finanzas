@@ -1,8 +1,6 @@
-
 from django.urls import include, path
-from . import views
+from core import views as coreViews
 
 urlpatterns = [
-
-    path('', views.frontview, name="front"),
+    path("", coreViews.front_view, name="front"),
 ]
