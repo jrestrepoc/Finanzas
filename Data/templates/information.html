@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ingresos y Gastos</title>
+    <link rel="stylesheet" href="{% static 'Styles/stylesStadistics.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Registro de Ingresos y Gastos</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="ingreso">Ingreso:</label>
+        <input type="text" id="ingreso" name="ingreso" placeholder="Ingrese el monto del ingreso"><br><br>
+        <label for="gasto">Gasto:</label>
+        <input type="text" id="gasto" name="gasto" placeholder="Ingrese el monto del gasto"><br><br>
+        <button type="submit">Registrar</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -13,7 +13,7 @@ def login(request):
         user = auth.authenticate(request, username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect("front")
+            return redirect("stadistics")
         else:
             return HttpResponse("Invalid Login, check your credentials")
     return render(request, 'login.html')
@@ -27,7 +27,7 @@ def register(request):
         user = User.objects.create_user(username, email, password)
         user.save()
         auth.login(request, user)
-        return redirect("front")
+        return redirect("stadistics")
     return render(request, 'registro.html')
 
 def logout(request):

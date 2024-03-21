@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Styles/stylesStadistics.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<div id="container">
+    <div id="menu">
+        <h1>Menú</h1>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Ayuda</a></li>
+            <li><a href="http://127.0.0.1:8000/logout/">Cerrar sesión</a></li>
+        </ul>
+        <p><a href="http://127.0.0.1:8000/information/">Ingresar datos</a></p>
+    </div>
+    <div id="content">
+        <h1>Estadísticas</h1>
+        <!-- Aquí puedes agregar tu código para mostrar estadísticas dinámicas -->
+        <canvas id="myChart"></canvas>
+        <p>Saldo: {{ saldo }}</p>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Ingresos', 'Gastos'],
+                datasets: [{
+                    label: 'Ingresos y Gastos',
+                    data: [{{ ingresos }}, {{ gastos }}],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 99, 132, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    </div>
+</div>
+
+</body>
+</html>
