@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Budget Buddy - Administrador de Finanzas Personales</title>
   <link rel="stylesheet" href="{% static 'Styles/stylesIndex.css' %}">
+  
 </head>
 <body>
   <header>
@@ -13,8 +14,7 @@
       <div class="container">
         <h1>Budget Buddy</h1>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Acerca</a></li>
+          <li><a href="acerca/">Acerca</a></li>
           <li><a href="#">Contacto</a></li>
           <li><a href="login/">Iniciar Sesión</a></li>
           <li><a href="register/">Registrarse</a></li>
@@ -26,8 +26,14 @@
   <section class="hero">
     <div class="container">
       <h2>Bienvenido a Budget Buddy</h2>
-      <p>Budget Buddy es una aplicación web diseñada para ayudarte a administrar tus finanzas personales de manera efectiva y sencilla.</p>
+      <p>Budget Buddy es una aplicación web diseñada para ayudarte a administrar tus finanzas personales de manera efectiva y sencilla. Te brindará estadísticas, informes y consejos acerca de cómo puedes mejorar tu salud financiera</p>
     </div>
+  </section>
+
+  <section class ="imghero">
+    <div class="container">
+      <img src="{% static 'Images/finanzas.avif'%}" class="imgbla" alt="">
+    </div>  
   </section>
 
   <footer>

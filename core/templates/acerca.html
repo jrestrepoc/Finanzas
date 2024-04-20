@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ingresos y Gastos</title>
+    <link rel="stylesheet" href="{% static 'Styles/stylesAcerca.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1 id ="tit">Budget Buddy</h1>
+        <nav>
+          <ul id ="navbar">
+          <li><a href="http://127.0.0.1:8000/">Inicio</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="http://127.0.0.1:8000/login/">Iniciar Sesión</a></li>
+          <li><a href="register/">Registrarse</a></li>
+          </ul>
+        </nav> 
+    </header>
+      
+      <section class="about">
+        <h2>Acerca de Nosotros</h2>
+        <div class="container1">
+          
+          <div class="col6">
+          <p>Somos BudgetBuddy, una aplicación web dedicada a ayudar a las personas a administrar sus finanzas personales de manera efectiva y sencilla.<br>Nuestro objetivo es proporcionar herramientas y recursos que permitan a nuestros usuarios tomar decisiones financieras informadas y mejorar su bienestar económico.<br>
+            Nuestro equipo está formado por expertos en finanzas y desarrollo web, comprometidos con brindar la mejor experiencia a nuestros usuarios. Nos esforzamos por ofrecer funcionalidades innovadoras, seguridad y confiabilidad en nuestra plataforma.</p>
+          </div>
+          <img src="{% static 'Images/finanzas3.png'%}" class="imgblack" alt="no aparece la imagen" >
+          </div>
+        </div>
+      </section>
+    
+      <footer>
+        <div class="container">
+          <p>&copy; 2024 BudgetBuddy - Todos los derechos reservados.</p>
+        </div>
+      </footer>
+</body>
+</html>
