@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="es">
-  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Ingresos y Gastos</title>
-    <link rel="stylesheet" href="{% static 'Styles/stylesAcerca.css' %}">
+    <title>Budget Buddy - Administrador de Finanzas Personales</title>
+    <link rel="stylesheet" href="{% static 'Styles/stylesAcercca.css' %}">
 </head>
 
 <body>
     <header>
-        <h1 id ="tit">Budget Buddy</h1>
+        <div class="app-name">
+            <h1 class="titulo">Budget Buddy</h1>
+        </div>
         <nav>
-          <ul id ="navbar">
-          <li><a href="http://127.0.0.1:8000/">Inicio</a></li>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="http://127.0.0.1:8000/login/">Iniciar Sesión</a></li>
-          <li><a href="register/">Registrarse</a></li>
-          </ul>
+            <ul class="navbar">
+                <li><a href="/" class="enlace">Inicio</a></li>
+                <li><a href="#" class="enlace">Contacto</a></li>
+                <li><a href="/login/" class="enlace">Iniciar Sesión</a></li>
+                <li><a href="/register/" class="enlace">Registrarse</a></li>
+            </ul>
         </nav> 
     </header>
       
-      <section class="about">
-        <h2>Acerca de Nosotros</h2>
+    <section class="about">
         <div class="container1">
-          
-          <div class="col6">
-          <p>Somos BudgetBuddy, una aplicación web dedicada a ayudar a las personas a administrar sus finanzas personales de manera efectiva y sencilla.<br>Nuestro objetivo es proporcionar herramientas y recursos que permitan a nuestros usuarios tomar decisiones financieras informadas y mejorar su bienestar económico.<br>
-            Nuestro equipo está formado por expertos en finanzas y desarrollo web, comprometidos con brindar la mejor experiencia a nuestros usuarios. Nos esforzamos por ofrecer funcionalidades innovadoras, seguridad y confiabilidad en nuestra plataforma.</p>
-          </div>
-          <img src="{% static 'Images/finanzas3.png'%}" class="imgblack" alt="no aparece la imagen" >
-          </div>
+            <div class="col-s6">
+                <h2 class="titulo">Acerca de Nosotros</h2>
+                <p class="parrafo">Somos BudgetBuddy, una aplicación web dedicada a ayudar a las personas a administrar sus finanzas personales de manera efectiva y sencilla.<br>Nuestro objetivo es proporcionar herramientas y recursos que permitan a nuestros usuarios tomar decisiones financieras informadas y mejorar su bienestar económico.<br>
+                Nuestro equipo está formado por expertos en finanzas y desarrollo web, comprometidos con brindar la mejor experiencia a nuestros usuarios. Nos esforzamos por ofrecer funcionalidades innovadoras, seguridad y confiabilidad en nuestra plataforma.</p>
+            </div>
+            <div class="col-s6">
+                <img src="{% static 'Images/finanzas3.png'%}" class="imagen" alt="no aparece la imagen">
+            </div>
         </div>
-      </section>
+    </section>
     
-      <footer>
-        <div class="container">
-          <p>&copy; 2024 BudgetBuddy - Todos los derechos reservados.</p>
-        </div>
-      </footer>
+    <footer>
+        <p class="copy">&copy; 2024 BudgetBuddy - Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>

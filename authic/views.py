@@ -32,4 +32,7 @@ def register(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('login')    
+    return redirect('login')
+
+def acerca(request):
+    return render(request, 'acerca.html')

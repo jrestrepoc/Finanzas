@@ -5,4 +5,5 @@ urlpatterns = [
     path("register/", authicViews.register, name="register"),
     path("login/", authicViews.login, name="login"),
     path("logout/", authicViews.logout, name="logout"),
+    path("acerca/", authicViews.acerca, name="acerca"),
 ]
